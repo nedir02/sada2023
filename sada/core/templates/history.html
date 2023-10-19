@@ -1,0 +1,249 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="ANE BAM">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Sada</title>
+    <link rel="icon" type="image/x-icon" href="{% static '../sada/static/assets/images/logos/sadaicon.ico' %}">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static '../sada/static/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static '../sada/static/assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static '../sada/static/assets/css/product-sada.css' %}">
+    <link rel="stylesheet" href="{% static '../sada/static/assets/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static '../sada/static/assets/css/lightbox.css' %}">
+
+  </head>
+
+<body>
+
+   
+
+  <!-- Sub Header -->
+  <div class="sub-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-sm-8">
+          <div class="left-content">
+            <p>{% trans 'Biziň önümlerimiz hem edil biz ýaly' %} <em>{% trans 'SADA' %}</em></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky" style="
+  background-color: rgba(7, 24, 73, 0.904);">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="{% url 'index' %}" class="logo">
+                        <img src="{% static '../sada/static/assets/images/logos/sada-enter.png' %}" alt="SADA" width="75" height="75">
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                          <li><a href="{% url 'index' %}">{% trans 'Baş sahypa' %}</a></li>
+                          <li><a href="{% url 'product' %}">{% trans 'Önümler'%}</a></li>
+                          
+                          <li><a href="{% url 'history' %}" class="active">{% trans 'Firmanyň taryhy'%}</a></li>
+                          <li><a href="{% url 'contact_us' %}">{% trans 'Habarlaşmak üçin'%}</a></li>
+                          <li class="has-sub">
+                            <a href="javascript:void(0)" class="logo">
+                                <img src="{% static '../sada/static/assets/images/language.png' %}" alt="TM" style="width:40px; height:40px">
+                            </a>
+                            <ul class="sub-menu">
+                                <li><a>{% include 'inc/lang.html' %}</a></li>
+                            </ul>
+                        </li>
+                      </ul>        
+                      <a class='menu-trigger'>
+                          <span>Menu</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <section class="heading-page header-text" id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h6>{% trans 'Biziň taryhymyz'%}</h6>
+          <h2>{% trans 'Ähli harydymyz SADA'%}</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="products-page" id="products">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="product-single-item">
+                <div class="thumb">
+                  <a href="{% static 'history' %}"><img src="{% static '../sada/static/assets/images/background/sada_hk.jpg' %}" alt="SADA hususy kärhana"></a>
+                </div>
+                <div class="down-content" style="background-color: rgba(238, 240, 245, 0.925);">
+                  <a href="{% url 'history' %}"><h4>{% trans 'Bizin Karhanamyz' %}</h4></a>
+                  <p>{% trans 'Основано в 2013 году. В 2013-2018гг. видами деятельности предприятия являлись строительство "под ключ" гражданских и промышленных объектов, а также энергообъектов, перевозка генеральных и опасных грузов, поставка непродовольственных товаров общего назначения и химической продукции, сдача в аренду различной строительной техники. С 2018 года по настоящее время основным видом деятельности предприятия является производство  реализация обувной продукции (галоши, боты, сланцы, шлепанцы) из ПВХ, ЭВА и ПУ. В общей сложности на производстве изготавливается более 30-и видов продукции. Производственная мощность цеха позволяет ежемесячно выпускать 140 тысяч пар обуви. ' %}</p>
+                  <p class="description">
+                    <p>
+                    <div class="thumb">
+                  <a href="{% static 'history' %}"><img src="{% static '../sada/static/assets/images/stanok/1.jpg' %}" alt="SADA hususy kärhana"></a>
+                </div>
+                    <br><br>  {% trans 'На производстве размещены 3 новых (ранее неиспользованных) производственных линий: 1-ПВХ (2017г.), 1-ЭВА (2017г.) и 1-ПУ (2017г.). Общая производственная мощность составляет 11 000 пар в сутки. Оборудование для ПВХ и ЭВА обуви, а также пресс-формы для литья закуплены у "Jin Jiang Machinery Co Ltd." (Китай), ПУ и комлектующие - "Ulusam Makina" (Турция). Полимерное сырье импортируется из Китая и Турции. Помимо задействованного на предприятии оборудования, установлены 2 новых оборудования (2019г.) для производства спортивной обуви из ПВХ от китайской компании "Jin Jiang Machinery Co Ltd.". Данное оборудование с момента монтажа не использовалось, из-за отсутствия сырья и форм для литья. Общая площадь производственного цеха составляет 5 400 кв.м. ' %}
+                    <p>
+                    <div class="thumb">
+                  <a href="{% static 'history' %}"><img src="{% static '../sada/static/assets/images/stanok/2.jpg' %}" alt="SADA hususy kärhana"></a>
+                </div>
+                    <br><br>{% trans 'Сезонность никак не влияет на само производство, но влияет на продажи, вне зависимости от маркетинговой деятельности. Причиной тому служит сезонная особенность выпускаемой продукции, в частности: 1) продажи галош увеличиваются весной-осенью, и снижаются зимой-летом; 2) продажи ботов увеличиваются осенью-зимой, сокращаются весной, летом - нет продаж из-за отсутствия спроса в связи с повышенной степенью сухого и жаркого климата; 3) шлепки из ЭВА и ПУ, а именно размерный ряд 40-45 и 36-45, соответственно, реализуются круглогодично, 4) остальные размеры - зависят от сезона, в частности: 5) продажи обуви из ЭВА и ПУ увеличиваются весной, летом, середина осени, и снижаются к концу осени-зимой' %}
+                    <p>
+                    <div class="thumb">
+                  <a href="{% static 'history' %}"><img src="{% static '../sada/static/assets/images/stanok/3.jpg' %}" alt="SADA hususy kärhana"></a>
+                </div>
+                    <p> <br><br></p>
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="hours">
+                        <h5>{% trans 'Iş wagty'%}</h5>
+                        <p>{% trans 'Duşenbe - Şenbe: 08:00 - 16:00' %}</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="location">
+                        <h5>{% trans 'Biziň salgymyz' %}</h5>
+                        <p>{% trans 'Mary welaýatynyň <br> Mary şäheri' %}</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="habarlasmak ucin">
+                        <h5>Tel/Faks</h5>
+                        <p>+993 63 59 15 14<br>+993 522 2 22 20</p>
+                      </div>
+                    </div>                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="main-button-red">
+                <a href="{% url 'index' %}">{% trans 'Baş sahypa dolanmak' %}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer" style="background-color: rgba(4, 19, 70, 0.692); padding-top: 25px; padding-bottom: 25px; margin-top: 25px">
+      <table style="background-color: aqua;"><p> COPYRIGHT © 2023 SADA HK., Ltd. {% trans 'Ähli maglumatlar goragly.'%}
+        <br>{% trans 'Designer:'%} <a href="" target="_parent" title="Akyyev Nedir +99365592820 & Bahtyyarov Merdan +99363750704">akn-bam</a></p></table>
+    </div>
+  </section>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="{% static '../sada/static/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static '../sada/static/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <script src="{% static '../sada/static/assets/js/isotope.min.js' %}"></script>
+    <script src="{% static '../sada/static/assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static '../sada/static/assets/js/lightbox.js' %}"></script>
+    <script src="{% static '../sada/static/assets/js/tabs.js' %}"></script>
+    <script src="{% static '../sada/static/assets/js/slick-slider.js' %}"></script>
+    <script src="{% static '../sada/static/assets/js/custom.js' %}"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+</body>
+
+
+</html>
+
+
+ <!-- <section class="section main-banner" id="top" data-section="section1">
+      <video autoplay muted loop id="bg-video">
+          <source src="assets/images/course-video.mp4" type="video/mp4" />
+      </video>
+
+      <div class="video-overlay header-text">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="caption">
+              <h6>Hello Students</h6>
+              <h2>Welcome to Education</h2>
+              <p>This is an edu product HTML CSS template provided by <a rel="nofollow" href="https://aknbam.com/page/1" target="_blank">aknbam website</a>. This is a Bootstrap v5.1.3 layout. The video background is taken from Pexels website, a group of young people by <a rel="nofollow" href="https://www.pexels.com/@pressmaster" target="_blank">Pressmaster</a>.</p>
+              <div class="main-button-red">
+                  <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+              </div>
+          </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </section> -->

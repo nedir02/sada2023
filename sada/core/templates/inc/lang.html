@@ -1,0 +1,50 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="aknbam">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Sada</title>
+
+  </head>
+<style>
+    .btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid rgba(204, 204, 204, 0.27);
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: rgba(0, 123, 255, 0.24);
+  color: rgb(255, 255, 255);
+}
+</style>
+<body>
+<form action="{% url 'set_language' %}" method="post">
+    {% csrf_token %}
+    <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}" />
+    <ul class="nav navbar-nav navbar-right language menu">
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        {% for language in languages %}
+            <li>
+                <button type="submit " class="btn btn-primary"
+                        name="language"
+                        value="{{ language.code }}"
+                        class="{% if language.code == LANGUAGE_CODE %}selected{% endif %}">
+                    {{ language.name_local }}
+                </button>
+            </li>
+        {% endfor %}
+    </ul>
+</form>
+
+</body>
+</html>

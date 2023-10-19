@@ -1,0 +1,493 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="ANE BAM">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Sada</title>
+    <link rel="icon" type="image/x-icon" href="{% static '../sada/static/assets/images/logos/sadaicon.ico' %}">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../sada/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static '../sada/static/assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static '../sada/static/assets/css/product-sada.css' %}">
+    <link rel="stylesheet" href="{% static '../sada/static/assets/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static '../sada/static/assets/css/lightbox.css' %}">
+
+  </head>
+
+<body>
+
+   
+
+  <!-- Sub Header -->
+  <div class="sub-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-sm-8">
+          <div class="left-content">
+            <p>{% trans 'Biziň önümlerimiz hem edil biz ýaly'%} <em>{% trans 'SADA'%}</em></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky" style="
+  background-color: rgba(7, 24, 73, 0.904);">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="{% url 'index' %}" class="logo">
+                        <img src="{% static '../sada/static/assets/images/logos/sada-enter.png' %}" alt="SADA" width="75" height="75">
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                          <li><a href="{% url 'index' %}">{% trans 'Baş sahypa'%}</a></li>
+                          <li><a href="{% url 'product' %}" class="active">{% trans 'önümler'%}</a></li>
+                          
+                          <li><a href="{% url 'history' %}">{% trans 'Firmanyň taryhy'%}</a></li>
+                          <li><a href="{% url 'contact_us' %}">{% trans 'Habarlaşmak üçin' %}</a></li>
+                          <li class="has-sub">
+                            <a href="javascript:void(0)" class="logo">
+                                <img src="{% static '../sada/static/assets/images/language.png' %}" alt="TM" style="width:40px; height:40px">
+                            </a>
+                            <ul class="sub-menu">
+                                <li><a>{% include 'inc/lang.html' %}</a></li>
+                            </ul>
+                        </li>
+                      </ul>        
+                      <a class='menu-trigger'>
+                          <span>{% trans 'Menu' %}</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <section class="heading-page header-text" id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h6>{% trans 'Önümlerimiz'%}</h6>
+          <h2>{% trans 'Bu ýerde' %}</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="products-page" id="products">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="filters">
+                <ul>
+                  <li data-filter="*"  class="active">{% trans 'Ähli Görnüşler' %}</li>
+                  <li data-filter=".şypbyk">{% trans 'Şypbyk'%}</li>
+                  <li data-filter=".galoş">{% trans 'Galoş' %}</li>
+                  <li data-filter=".boty">{% trans 'Boty' %}</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="row grid">
+                <!-- suratlar-->
+                <div class="col-lg-4 aknbam-item-col all boty">
+                  <div class="product-item">
+                    <div class="thumb">
+
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/all_shoes/AKM_3076.jpg' %}" alt="Boty"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Boty' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 aknbam-item-col all şypbyk">
+                  <div class="product-item">
+                    <div class="thumb">
+
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/all_shoes/AKM_3082.jpg' %}" alt="Şypbyk"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Şypbyk' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-lg-4 aknbam-item-col all galoş">
+                  <div class="product-item">
+                    <div class="thumb">
+
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/all_shoes/AKM_3084.jpg' %}" alt="Galoş"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Galoş' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 aknbam-item-col all şypbyk">
+                  <div class="product-item">
+                    <div class="thumb">
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/all_shoes/AKM_3896.jpg' %}" alt="Şypbyk"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Şypbyk' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 aknbam-item-col all şypbyk">
+                  <div class="product-item">
+                    <div class="thumb">
+
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/all_shoes/AKM_3905.jpg' %}" alt="Şypbyk"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Şypbyk' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 aknbam-item-col all şypbyk">
+                  <div class="product-item">
+                    <div class="thumb">
+
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/all_shoes/AKM_3906.jpg' %}" alt="Şypbyk"></a>
+                    </div>
+
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Şypbyk' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 aknbam-item-col all şypbyk">
+                  <div class="product-item">
+                    <div class="thumb">
+
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/all_shoes/AKM_3919.jpg' %}" alt="Şypbyk"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Şypbyk' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+                <!-- bir surat kody-->
+                <div class="col-lg-4 aknbam-item-col all boty">
+                  <div class="product-item">
+                    <div class="thumb">
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/new_shoes/(1).jpg' %}" alt="Boty"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Boty' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+                <!-- bir surat kody-->
+                <div class="col-lg-4 aknbam-item-col all galoş">
+                  <div class="product-item">
+                    <div class="thumb">
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/new_shoes/(2).jpg' %}" alt="Galoş"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Galoş' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 aknbam-item-col all şypbyk">
+                  <div class="product-item">
+                    <div class="thumb">
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/new_shoes/(3).jpg' %}" alt="Şypbyk"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Şypbyk' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 aknbam-item-col all boty">
+                  <div class="product-item">
+                    <div class="thumb">
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/new_shoes/(4).jpg' %}" alt="Boty"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Boty' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 aknbam-item-col all boty">
+                  <div class="product-item">
+                    <div class="thumb">
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/new_shoes/(5).jpg' %}" alt="Boty"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Boty' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 aknbam-item-col all boty">
+                  <div class="product-item">
+                    <div class="thumb">
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/new_shoes/(6).jpg' %}" alt="Boty"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Boty' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 aknbam-item-col all şypbyk">
+                  <div class="product-item">
+                    <div class="thumb">
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/new_shoes/(7).jpg' %}" alt="Şypbyk"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Şypbyk' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 aknbam-item-col all şypbyk">
+                  <div class="product-item">
+                    <div class="thumb">
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/new_shoes/(8).jpg' %}" alt="Şypbyk"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Şypbyk' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 aknbam-item-col all şypbyk">
+                  <div class="product-item">
+                    <div class="thumb">
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/new_shoes/(9).jpg' %}" alt="Şypbyk"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Şypbyk' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 aknbam-item-col all şypbyk">
+                  <div class="product-item">
+                    <div class="thumb">
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/new_shoes/(10).jpg' %}" alt="Şypbyk"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Şypbyk' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+<!--
+                <div class="col-lg-4 aknbam-item-col all şypbyk">
+                  <div class="product-item">
+                    <div class="thumb">
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/new_shoes/(11).jpg' %}" alt="Şypbyk"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Şypbyk' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+-->
+                <div class="col-lg-4 aknbam-item-col all şypbyk">
+                  <div class="product-item">
+                    <div class="thumb">
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/new_shoes/(12).jpg' %}" alt="Şypbyk"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Şypbyk' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 aknbam-item-col all şypbyk">
+                  <div class="product-item">
+                    <div class="thumb">
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/new_shoes/(13).jpg' %}" alt="Şypbyk"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Şypbyk' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 aknbam-item-col all şypbyk">
+                  <div class="product-item">
+                    <div class="thumb">
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/new_shoes/(14).jpg' %}" alt="Şypbyk"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Şypbyk' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 aknbam-item-col all şypbyk">
+                  <div class="product-item">
+                    <div class="thumb">
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/new_shoes/(15).jpg' %}" alt="Şypbyk"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Şypbyk' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 aknbam-item-col all şypbyk">
+                  <div class="product-item">
+                    <div class="thumb">
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/new_shoes/(16).jpg' %}" alt="Şypbyk"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Şypbyk' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 aknbam-item-col all şypbyk">
+                  <div class="product-item">
+                    <div class="thumb">
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/new_shoes/(17).jpg' %}" alt="Şypbyk"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Şypbyk' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 aknbam-item-col all şypbyk">
+                  <div class="product-item">
+                    <div class="thumb">
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/new_shoes/(18).jpg' %}" alt="Şypbyk"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Şypbyk' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+<!--
+                <div class="col-lg-4 aknbam-item-col all şypbyk">
+                  <div class="product-item">
+                    <div class="thumb">
+                      <a href="#products"><img src="{% static '../sada/static/assets/images/new_shoes/(19).jpg' %}" alt="Şypbyk"></a>
+                    </div>
+                    <div class="down-content">
+                      <a href="#products"><h2>{% trans 'Şypbyk' %}</h2></a>
+                    </div>
+                  </div>
+                </div>
+-->
+                <!-- suratlary sony-->
+              </div>
+            </div>
+<!--            <div class="col-lg-12">
+              <div class="pagination">
+                <ul>
+                  <li class="active"><a >1</a></li>
+                  <li><a >2</a></li>
+                  <li><a >3</a></li>
+                  <li><a ><i class="fa fa-angle-right"></i></a></li>
+                </ul>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer" style="background-color: rgba(4, 19, 70, 0.692); padding-top: 25px; padding-bottom: 25px; margin-top: 25px">
+      <table style="background-color: aqua;"><p> COPYRIGHT © 2023 SADA HK., Ltd. {% trans 'Ähli maglumatlar goragly.'%}
+        <br>{% trans 'Designer:'%} <a href="" target="_parent" title="Akyyev Nedir +99365592820 & Bahtyyarov Merdan +99363750704">akn-bam</a></p></table>
+    </div>
+  </section>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="{% static '../sada/static/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static '../sada/static/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <script src="{% static '../sada/static/assets/js/isotope.min.js' %}"></script>
+    <script src="{% static '../sada/static/assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static '../sada/static/assets/js/lightbox.js' %}"></script>
+    <script src="{% static '../sada/static/assets/js/tabs.js' %}"></script>
+    <script src="{% static '../sada/static/assets/js/isotope.js' %}"></script>
+    <script src="{% static '../sada/static/assets/js/slick-slider.js' %}"></script>
+    <script src="{% static '../sada/static/assets/js/custom.js' %}"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+</body>
+
+
+</html>

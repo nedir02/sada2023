@@ -1,0 +1,270 @@
+
+{% load static %}
+
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="aknbam">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Sada</title>
+    <link rel="icon" type="image/x-icon" href="{% static '../sada/static/assets/images/logos/sadaicon.ico' %}">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{%static '/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static '../sada/static/assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static '../sada/static/assets/css/product-sada.css' %}">
+    <link rel="stylesheet" href="{% static '../sada/static/assets/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static '../sada/static/assets/css/lightbox.css' %}">
+
+  </head>
+
+<body>
+
+
+
+
+  <!-- Sub Header -->
+  <div class="sub-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-sm-8">
+          <div class="left-content">
+            <p>{% trans 'Biziň önümlerimiz hem edil biz ýaly'%} <em>{% trans 'SADA' %}</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky" style="
+  background-color: rgba(7, 24, 73, 0.904);">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="{% url 'index' %}" class="logo">
+                        <img src="{% static '../sada/static/assets/images/logos/sada-enter.png' %}" alt="SADA" style="width:100px; height:70px">
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                          <li class="scroll-to-section"><a href="{% url 'index' %}" class="active">{% trans 'Baş sahypa'%}</a></li>
+                          <li><a href="{% url 'product' %}">{% trans 'Önümler'%}</a></li>
+                          <!-- <li class="has-sub">
+                              <a href="javascript:void(0)">Önüm</a>
+                              <ul class="sub-menu">
+                                  <li><a href="products.html">Önümlerimiz</a></li>
+                                  <li><a href="otherpage.html">önümler barada</a></li>
+                              </ul>
+                          </li> -->
+                          <li><a href="{% url 'history' %}">{% trans 'Firmanyň taryhy' %}</a></li>
+                          <li><a href="{% url 'contact_us' %}">{% trans 'Habarlaşmak üçin' %}</a></li>
+                          <li class="has-sub">
+                              <a href="javascript:void(0)" class="logo">
+                                  <img src="../../sada/static/assets/images/language.png" alt="TM" style="width:40px; height:40px">
+                              </a>
+                              <ul class="sub-menu">
+                                  <li><a>{% include 'inc/lang.html' %}</a></li>
+                              </ul>
+                          </li>
+                          <!--<li class="has-sub">
+                              <a href="javascript:void(0)" class="logo">
+                            </a>
+                              <ul class="sub-menu">
+                              <li><a href="#">EN</a></li>
+                              <li><a href="#">RU</a></li>
+                              <li><a href="#">TM</a></li>
+                            </ul>
+                          </li>-->
+                      </ul>
+
+                      <a class='menu-trigger'>
+                          <span>{% trans 'Menu' %}</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <section class="heading-page header-text" id="top" style="padding-bottom: 170px; padding-top: 170px; ">
+      <audio autoplay repeat hidden id="bg-audio">
+              <source src="{% static '../sada/static/assets/images/sada_aydym.mp3' %}" type="audio/mp3" />
+      </audio>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h6>{% trans 'Biziň öndürýän' %}</h6>
+          <h2>{% trans 'Köwüşlerimiz' %}</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** Main Banner Area End ***** -->
+
+  <section class="services" style="top: 650px; ">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-service-item owl-carousel">
+            <div class="item">
+              <div class="icon">
+                <img src="{% static '../sada/static/assets/images/all_shoes/AKM_3076.jpg' %}" style="border-radius: 35px; background-position: center center;" alt="Boty">
+              </div>
+{#              <div class="down-content">#}
+{#                <h4 onmouseover="this.style.color='blue';" onmouseout="this.style.color='white';">Boty</h4>#}
+{#              </div>#}
+            </div>
+
+            <div class="item">
+              <div class="icon">
+                <img src="{% static '../sada/static/assets/images/all_shoes/AKM_3906.jpg' %}" style="border-radius: 35px; background-position: center center;" alt="Şypbyk">
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="icon">
+                <img src="{% static '../sada/static/assets/images/all_shoes/AKM_3082.jpg' %}" style="border-radius: 35px;" alt="Galoş">
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="icon">
+                <img src="{% static '../sada/static/assets/images/all_shoes/AKM_3896.jpg' %}" style="border-radius: 35px;" alt="Şypbyk">
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="icon">
+                <img src="{% static '../sada/static/assets/images/all_shoes/AKM_3905.jpg' %}" style="border-radius: 35px;" alt="Şypbyk">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="upcoming-products" id="products">
+   <!-- <div class="container"> -->
+    <div class="umumy" style="display: flex; justify-content: space-evenly; align-items: center; ">
+             {% for item in product %}
+                 <div class="surat" >
+                 <img src="{{ item.photo.url }}" style="width: 400px;  height: auto" alt="photo">
+                     <p style="text-align: center; color: black; font-weight: bold;
+                     font-size: 24px; background-color: white; width: 98%;
+                     height: 40px; padding-left: 10px; padding-right: 10px;
+                      border-start-start-radius: 120px;   ">{{ item.title }}</p>
+
+        </div>
+             {% endfor %}
+    </div>
+
+<!--{#                 <div class="down-content">#}
+{#                  <span>{% trans 'Harydyn ady:'%} </span>#}
+{#                </div>#} -->
+
+      <!--<div class="row" >
+        <div class="col-lg-12">
+          <div class="row grid" >
+            <div class="col-lg-4 aknbam-item-col all boty">
+              <div class="product-item">
+                <div class="thumb">
+                  <a href="#products"><img src="" alt="Boty"></a>
+                </div>
+                <div class="down-content">
+{#                  <span>{% trans 'Harydyn ady:'%} </span>#}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
+ <!--   </div>  -->
+    <div class="footer" style="background-color: rgba(4, 19, 70, 0.692); padding-top: 25px; padding-bottom: 25px; margin-top: 25px">
+      <table style="background-color: aqua;"><p> COPYRIGHT © 2023 SADA HK., Ltd. {% trans 'Ähli maglumatlar goragly.'%}
+        <br>{% trans 'Designer:'%} <a href="" target="_parent" title="Akyyev Nedir +99365592820 & Bahtyyarov Merdan +99363750704">akn-bam</a></p></table>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="{% static '../sada/static/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static '../sada/static/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <script src="{% static '../sada/static/assets/js/isotope.min.js' %}"></script>
+    <script src="{% static '../sada/static/assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static '../sada/static/assets/js/lightbox.js' %}"></script>
+    <script src="{% static '../sada/static/assets/js/tabs.js' %}"></script>
+    <script src="{% static '../sada/static/assets/js/slick-slider.js' %}"></script>
+    <script src="{% static '../sada/static/assets/js/custom.js' %}"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+
+</body>
+</html>
+
+
+
